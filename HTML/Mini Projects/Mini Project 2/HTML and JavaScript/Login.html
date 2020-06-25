@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script type="text/javascript">
+        function validation()
+        {
+            var userText = document.text.username.value;
+            var userpass = document.text.password.value;
+
+            if(userText=="" || userpass=="")
+            {
+                alert("Field Can not be empty");
+                return false;
+            }
+
+            if (userpass.match(/[^a-z]/g) && userpass.match(/[^A-Z]/g) && userpass.match(/[^0-9]/g) && userpass.match(/[^a-zA-Z\d]/g))
+            {
+                alert("Password must contain 1 lowercase, 1 uppercase and 1 number");
+                return false;
+            }
+            
+            if(userpass.length<6)
+            {
+                alert("Password can't be less than 6 characters");
+                return false;
+            }
+        }
+    </script>
+  <center>
+<form name = "text" action="E:\Wipro\HTML\MiniProject2\HTMLandJS\Welcome.html" method="POST">
+    <table>
+      <tr><td></td><td><h2>Login Page</h2></td></tr>
+      <tr><td> Username </td> <td><input type="text" name="username"></td></tr>
+      <tr><td> Password </td> <td><input type="password" name="password" ></td></tr>
+      <tr><td></td><td><input type="button" value="Login" onClick="return validation()"></td> </tr>
+      <tr><td></td><td><a href="E:\Wipro\HTML\MiniProject2\HTMLandJS\NewUser.html"> New User</a></td></tr>
+    </table>
+</form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+<title>
+</title>
+</head>
+<body> 
+    <script type="text/javascript">
+    function calculateSum()
+    {
+        let num1 = Number(document.text.num1.value);
+        let num2 = Number(document.text.num2.value);
+
+        alert("Sum is "+ (num1 + num2));
+        return true;
+        
+    }
+    </script>
+
+    <form name= "text">
+        <table>
+        <tr><td>Enter Number 1</td><td><input type="number" name="num1"></td></tr>
+        <tr><td>Enter Number 2</td><td><input type="number" name="num2"></td></tr>
+        <tr><td></td><td><input type="button" value="Calculate" onclick="calculateSum()" name="button"></td></tr>
+        </table>
+    </form>
+    
+</body>
+</html>

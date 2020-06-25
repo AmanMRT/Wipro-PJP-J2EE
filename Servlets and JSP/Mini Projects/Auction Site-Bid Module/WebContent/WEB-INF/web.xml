@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+<servlet>
+	<servlet-name>Assignment31</servlet-name>
+	<servlet-class>ServletConfig_and_ServletContext.Assignment31</servlet-class>
+	
+	<!-- This is Servlet Config which is shared by one particular servlet in which it is shared-->
+	<init-param>
+		<param-name>homename</param-name>
+		<param-value>Welcome Here!! (inside Servlet tag)</param-value>
+	</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Assignment31</servlet-name>
+	<url-pattern>/ServletConfig_and_ServletContext/Assignment31</url-pattern>
+</servlet-mapping>
+
+<!-- This is Servlet Context which will be shared by all servlets-->
+	<context-param>
+		<param-name>homename</param-name>
+		<param-value>Welcome Here!!! (Outside servlet tag)</param-value>
+	</context-param>
+	
+</web-app>

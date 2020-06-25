@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+        <script>
+            function validate() 
+            {
+                var num = document.getElementById("num");
+                var password = document.getElementById("password");
+                if (num.value == null || num.value == "" || isNaN(num.value)) 
+                {
+                    alert("Please enter a number only!");
+                    num.focus();
+                    return false;
+                }
+                if (password.value == "" || password.value.length < 4) 
+                {
+                    alert("Please enter a password longer than 4 chars!");
+                    password.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()">
+            <label for="num">Member Number :</label><input type="text" id="num" /><br />
+            <label for="password">Password :</label><input type="password" id="password" /><br />
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>

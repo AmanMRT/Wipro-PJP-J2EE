@@ -1,0 +1,24 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js"></script>
+    </head>
+    <title></title>
+    <body class="body">    
+            <form  name = "text" onsubmit="return check()" method="POST">
+                <table class="table" style="background-color: gray" align="center" >
+                  <tr><td> First Name </td> <td><input type="text" id="firstname" class="shadow" required></td></tr>
+                  <tr><td> Last Name </td> <td><input type="text" id="lastname" class="shadow" required></td></tr>
+                  <tr><td> Password </td> <td><input type="password" id="password"class="shadow" required ></td></tr>
+                  <tr><td> Confirm Password </td> <td><input type="password" id="confirmpassword"class="shadow" required ></td></tr>
+                  <tr><td> Gender </td> <td><input type="radio" name="male"><label>Male</label>&nbsp;&nbsp;<input type="radio" name="female"><label>Female</label></td></tr>
+                  <tr><td> Phone Number </td> <td><input type="number" id="phonenumber" class="shadow" required></td></tr>
+                  <tr><td> Date of Birth </td> <td><input type="date" id="dob" class="shadow" required></td></tr>
+                  <tr><td> Email Address </td> <td><input type="email" id="email" class="shadow" required></td></tr>
+                  
+                  <tr><td></td><td><input type="submit" value="Submit" id="submit" class="shadow" required></td> </tr>
+                </table>
+            </form>
+            
+    </body>
+</html>

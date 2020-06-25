@@ -1,0 +1,22 @@
+.body{
+    background-color: purple;
+}
+.table{
+    border: 2px solid;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+#submit:hover 
+{
+background-color:black;
+color: white;
+}
+.shadow:hover{
+    background-color:lightgray;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+td {
+    text-align: center;
+    padding: 5px;
+  }

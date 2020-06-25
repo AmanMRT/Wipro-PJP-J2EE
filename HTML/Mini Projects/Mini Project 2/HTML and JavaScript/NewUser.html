@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script type="text/javascript">
+        function validation()
+        {
+            var userText = document.text.username.value;
+            var userpass = document.text.password.value;
+            var userdob = document.text.dob.value;
+            var userno = document.text.number.value;
+            var useraddress = document.text.address.value;
+
+            if(userText=="" || userpass==""|| userdob=="" || userno=="" || useraddress=="")
+            {
+                alert("Field Can not be empty");
+                return false;
+            }
+
+            if(username.length < 4 && username.length > 8)
+            {
+              alert("Username should contain min of 4 and max of 8 characters");
+                return false;
+            }
+            if (userpass.match(/[^a-z]/g) && userpass.match(/[^A-Z]/g) && userpass.match(/[^0-9]/g) && userpass.match(/[^a-zA-Z\d]/g))
+            {
+                alert("Password must contain 1 lowercase, 1 uppercase and 1 number");
+                return false;
+            }
+            
+            if(userpass.length < 6)
+            {
+                alert("Password can't be less than 6 characters");
+                return false;
+            }
+
+            if(userno.length != 10)
+            {
+              alert("Contact Number should be of 10 digit");
+                return false;
+            }
+        }
+    </script>
+  <center>
+<form name = "text" action="E:\Wipro\HTML\MiniProject2\HTMLandJS\Welcome.html" method="POST">
+    <table>
+      <tr><td></td><td><h2>Register Page</h2></td></tr>
+      <tr><td> Username </td> <td><input type="text" name="username"></td></tr>
+      <tr><td> Password </td> <td><input type="password" name="password" ></td></tr>
+      <tr><td> DOB </td> <td><input type="date" name="dob"></td></tr>
+      <tr><td> Gender </td> <td><input type="radio" name="male"><label>Male</label> &nbsp;&nbsp; <input type="radio" name="female"><label>Female</label></td></tr>
+      <tr><td> State <td>
+        <select>
+          <option value="preselected">Choose a state</option>
+          <option value="Delhi">Delhi</option>
+          <option value="UP">Uttar Pradesh</option>
+          <option value="Karnataka">Karnataka</option>
+        </select>
+      </td></tr>
+      <tr><td> Contact Number </td> <td><input type="number" name="number" ></td></tr>
+      <tr><td> Address </td> <td><textarea id="w3review" name="address" rows="4" cols="50"></textarea></td></tr>
+      <tr><td></td><td><input type="button" value="Register" onClick="return validation()"> &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset"></td> </tr>    
+    </table>
+</form>
+    </center>
+</body>
+</html>

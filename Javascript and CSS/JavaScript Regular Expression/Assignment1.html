@@ -1,0 +1,32 @@
+<html lang="en">
+    <head>
+        <script>
+            function validate() 
+            {
+                var num = document.getElementById("num");
+                var password = document.getElementById("password");
+                var memNumRegEx = /^\d+$/;
+                var passwdRegEx = /.....+/;
+                if (!num.value.match(memNumRegEx)) 
+                {
+                    alert("Enter Numbers only");
+                    num.focus();
+                    return false;
+                }
+                if (!password.value.match(passwdRegEx)) 
+                {
+                    alert("Password length too short must be longer than 4 chars!");
+                    password.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()">
+            <label>Member Number :</label><input type="text" id="num" /><br />
+            <label>Password :</label><input type="password" id="password" /><br />
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
